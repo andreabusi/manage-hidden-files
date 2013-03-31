@@ -7,6 +7,7 @@ It works with Alfred 2 and the Powerpack.
 
 For more information about Alfred please visit the [official site](http://www.alfredapp.com/)
 
+
 Features
 ========
 
@@ -19,6 +20,8 @@ Features
 
 Usage
 =====
+
+How to use workflow:
 
 1. Install workflow in Alfred
 2. Type "hidden"
