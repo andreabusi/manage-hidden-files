@@ -17,6 +17,17 @@ Features
 + Configurable directly in Alfred prefs
 
 
+Usage
+=====
+
+1. Install workflow in Alfred
+2. Type "hidden"
+3. Now you have to simply type this:
+	+ "true" or "t" for show hidden files
+	+ "false" or "f" for hide hidden files
+4. Enjoy! :)
+
+
 Screenshots
 ===========
 
