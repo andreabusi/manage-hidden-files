@@ -16,6 +16,7 @@ Features
 + Automatically restart Finder after a command is given
 + Uses Notification Center to inform user of the outcome of the operation
 + Configurable directly in Alfred prefs
++ Simple hotkey to show/hide hidden files directly from keyboard
 
 
 Usage
@@ -29,6 +30,10 @@ How to use workflow:
 	+ "true" or "t" for hide hidden files
 	+ "false" or "f" for show hidden files
 4. Enjoy! :)
+
+Otherwise you can simply use this simple hotkey:
+- Cmd + Shift + H: hide hidden files
+- Cmd + Shift + S: show hidden files
 
 
 Screenshots
@@ -49,9 +54,15 @@ Screenshots
 
 Changelog
 =========
+**Versione 1.2**
+
++ Added pre OSX 10.8 support
++ Added hotkeys
 
 **Version 1.1**
+
 Changed true/false for a more natural usage
 
 **Version 1.0**
+
 First working version! :)
