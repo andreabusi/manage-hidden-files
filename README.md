@@ -26,8 +26,8 @@ How to use workflow:
 1. Install workflow in Alfred
 2. Type "hidden"
 3. Now you have to simply type this:
-	+ "true" or "t" for show hidden files
-	+ "false" or "f" for hide hidden files
+	+ "true" or "t" for hide hidden files
+	+ "false" or "f" for show hidden files
 4. Enjoy! :)
 
 
@@ -45,3 +45,13 @@ Screenshots
 **Prevent errors**
 
 ![screen3](http://www.bubidevs.net/uploads/alfred_hidden_3.png)
+
+
+Changelog
+=========
+
+**Version 1.1**
+Changed true/false for a more natural usage
+
+**Version 1.0**
+First working version! :)
