@@ -41,15 +41,15 @@ Screenshots
 
 **Show hidden files (in subtitle you can see actual state of hidden files)**
 
-![screen1](http://www.bubidevs.net/uploads/alfred_hidden_1.png)
+![screen1](http://www.bubidevs.net/uploads/alfred_hiddenfiles_1.png)
 
 **Hide hidden files**
 
-![screen2](http://www.bubidevs.net/uploads/alfred_hidden_2.png)
+![screen2](http://www.bubidevs.net/uploads/alfred_hiddenfiles_2.png)
 
 **Prevent errors**
 
-![screen3](http://www.bubidevs.net/uploads/alfred_hidden_3.png)
+![screen3](http://www.bubidevs.net/uploads/alfred_hiddenfiles_3.png)
 
 
 Changelog
