@@ -40,17 +40,21 @@ Otherwise you can simply use this simple hotkey:
 Screenshots
 ===========
 
+**Toggle the visibility of hidden files**
+
+![screen1](http://www.bubidevs.net/uploads/github/images/alfred_hiddenfiles_1.png)
+
 **Show hidden files (in subtitle you can see actual state of hidden files)**
 
-![screen1](http://www.bubidevs.net/uploads/alfred_hiddenfiles_1.png)
+![screen2](http://www.bubidevs.net/uploads/github/images/alfred_hiddenfiles_2.png)
 
 **Hide hidden files**
 
-![screen2](http://www.bubidevs.net/uploads/alfred_hiddenfiles_2.png)
+![screen3](http://www.bubidevs.net/uploads/github/images/alfred_hiddenfiles_3.png)
 
 **Prevent errors**
 
-![screen3](http://www.bubidevs.net/uploads/alfred_hiddenfiles_3.png)
+![screen4](http://www.bubidevs.net/uploads/github/images/alfred_hiddenfiles_4.png)
 
 
 Changelog
