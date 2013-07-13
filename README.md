@@ -29,6 +29,7 @@ How to use workflow:
 3. Now you have to simply type this:
 	+ "true" or "t" for hide hidden files
 	+ "false" or "f" for show hidden files
+	+ or you can type nothing for toggle the visibility of hidden files
 4. Enjoy! :)
 
 Otherwise you can simply use this simple hotkey:
@@ -54,7 +55,13 @@ Screenshots
 
 Changelog
 =========
-**Versione 1.2**
+
+**Version 1.3**
+
++ Now is possible to simply type 'Hidden' to change visibility of hidden files
++ Script is now in external file 
+
+**Version 1.2**
 
 + Added pre OSX 10.8 support
 + Added hotkeys
