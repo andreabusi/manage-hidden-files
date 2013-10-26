@@ -92,7 +92,9 @@ fi
 
 #check the input and display the relative title
 PAR={query}
-if [ $PAR = "f" ] || [ $PAR = "false" ]; then
+if [ -z $PAR ]; then
+	title="Toggle visibility of hidden files"
+elif [ $PAR = "f" ] || [ $PAR = "false" ]; then
 	title="Show hidden files"
 elif [ $PAR = "t" ] || [ $PAR = "true" ]; then
 	title="Hide hidden files"
@@ -117,31 +119,8 @@ echo "&lt;/items&gt;"</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>4A15B392-8832-49AA-8D07-1EEEA4F9F049</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>3</integer>
-				<key>argumenttext</key>
-				<string>false</string>
-				<key>hotkey</key>
-				<integer>1</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>S</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>4654DBD6-6E90-4DED-8CB3-BAB4466B6973</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -149,34 +128,7 @@ echo "&lt;/items&gt;"</string>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
-				<string>#!/bin/sh
-
-#check the version of osx
-VERSION=$(sw_vers -productVersion)
-OSX=${VERSION:0:4}
-
-#check user input
-VAR={query}
-if [ "$VAR" = "false" ] || [ "$VAR" = "f" ]; then
-	if [ "$OSX" = "10.8" ]; then
-		defaults write com.apple.finder AppleShowAllFiles -bool true
-	else
-		defaults write com.apple.Finder AppleShowAllFiles -bool true
-	fi
-	echo "Hidden files are now visible!"
-	killall Finder
-elif [ "$VAR" = "true" ] || [ "$VAR" = "t" ]; then
-	if [ "$OSX" = "10.8" ]; then
-		defaults write com.apple.finder AppleShowAllFiles -bool false
-	else
-		defaults write com.apple.Finder AppleShowAllFiles -bool false
-	fi
-	echo "Hidden files are now hidden!"
-	killall Finder
-else
-	echo "Command "$VAR" not found!"
-fi
-</string>
+				<string>sh ./scripts/hiddenfiles.sh {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -184,31 +136,8 @@ fi
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>3</integer>
-				<key>argumenttext</key>
-				<string>true</string>
-				<key>hotkey</key>
-				<integer>4</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>H</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>1F455EA3-4EEF-4751-BB74-C3D3EE09C979</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -232,6 +161,58 @@ fi
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>8BC60E22-ED6E-4A16-8909-D160C7E69A50</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>true</string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1F455EA3-4EEF-4751-BB74-C3D3EE09C979</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>false</string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>4654DBD6-6E90-4DED-8CB3-BAB4466B6973</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -254,6 +235,16 @@ Otherwise you can simply use this simple hotkey:
 Changelog
 =========
 
+**Version 1.4**
+
++ Added OS X Mavericks compatibility
+
+**Version 1.3**
+
++ Now is possible to simply type 'Hidden' to change visibility of hidden files
++ Script is now in external file 
+
+
 **Version 1.2**
 
 + Added pre OSX 10.8 support
@@ -273,27 +264,27 @@ First working version! :)</string>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>210</real>
 		</dict>
 		<key>1F455EA3-4EEF-4751-BB74-C3D3EE09C979</key>
 		<dict>
 			<key>ypos</key>
-			<real>220</real>
+			<real>300</real>
 		</dict>
 		<key>4654DBD6-6E90-4DED-8CB3-BAB4466B6973</key>
 		<dict>
 			<key>ypos</key>
-			<real>340</real>
+			<real>440</real>
 		</dict>
 		<key>4A15B392-8832-49AA-8D07-1EEEA4F9F049</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>10</real>
 		</dict>
 		<key>8BC60E22-ED6E-4A16-8909-D160C7E69A50</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>210</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

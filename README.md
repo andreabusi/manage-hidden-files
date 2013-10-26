@@ -60,6 +60,10 @@ Screenshots
 Changelog
 =========
 
+**Version 1.4**
+
++ Added OS X Mavericks compatibility
+
 **Version 1.3**
 
 + Now is possible to simply type 'Hidden' to change visibility of hidden files
