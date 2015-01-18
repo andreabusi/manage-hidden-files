@@ -78,7 +78,7 @@ VERSION=$(sw_vers -productVersion)
 OSX=${VERSION:0:4}
 
 #check the current value and display the result as subtitle
-if [ "$OSX" = "10.8" ]; then
+if [ "$OSX" = "10.8" || "$OSX" = "10.9" || "$OSX" = "10.10" ]; then
 	CURVALUE=$(defaults read com.apple.finder AppleShowAllFiles -bool)
 else
 	CURVALUE=$(defaults read com.apple.Finder AppleShowAllFiles -bool)
@@ -181,13 +181,15 @@ echo "&lt;/items&gt;"</string>
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>1F455EA3-4EEF-4751-BB74-C3D3EE09C979</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -206,13 +208,15 @@ echo "&lt;/items&gt;"</string>
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>4654DBD6-6E90-4DED-8CB3-BAB4466B6973</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -234,6 +238,11 @@ Otherwise you can simply use this simple hotkey:
 
 Changelog
 =========
+
+**Version 1.5**
+
++ Added OS X Yosemite compatibility
++ Fixed wrong status with OS X &gt; 10.8
 
 **Version 1.4**
 
