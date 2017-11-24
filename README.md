@@ -1,9 +1,9 @@
 Manage hidden files for Alfred 2
 ===================
 
-This workflow permit to toggle the visiblity of hidden files in Finder in OS X 10.8.
+This workflow permit to toggle the visiblity of hidden files in Finder in macOS (10.8 and higher).
 
-It works with Alfred 2 and the Powerpack.
+It works with Alfred 2/3 and the Powerpack.
 
 For more information about Alfred please visit the [official site](http://www.alfredapp.com/)
 
@@ -11,7 +11,7 @@ For more information about Alfred please visit the [official site](http://www.al
 Features
 ========
 
-+ Simply show/hide hidden files on OS X
++ Simply show/hide hidden files on macOS
 + View the current status diectly in Alfred (see figure for more information)
 + Automatically restart Finder after a command is given
 + Uses Notification Center to inform user of the outcome of the operation
@@ -59,6 +59,10 @@ Screenshots
 
 Changelog
 =========
+
+**Version 2**
++ Added macOS (now only 10.8 and higher compatible)
++ Updated icon
 
 **Version 1.5**
 

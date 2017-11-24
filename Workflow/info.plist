@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>net.bubidevs.HiddenFiles</string>
+	<string>net.bubidevs.alfred.hiddenfiles</string>
 	<key>connections</key>
 	<dict>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
@@ -78,36 +78,36 @@ VERSION=$(sw_vers -productVersion)
 OSX=${VERSION:0:4}
 
 #check the current value and display the result as subtitle
-if [ "$OSX" = "10.8" || "$OSX" = "10.9" || "$OSX" = "10.10" ]; then
+if [ &quot;$OSX&quot; = &quot;10.8&quot; || &quot;$OSX&quot; = &quot;10.9&quot; || &quot;$OSX&quot; = &quot;10.10&quot; ]; then
 	CURVALUE=$(defaults read com.apple.finder AppleShowAllFiles -bool)
 else
 	CURVALUE=$(defaults read com.apple.Finder AppleShowAllFiles -bool)
 fi
 
 if [ $CURVALUE = 0 ]; then
-	subtitle="Current status: hidden"
+	subtitle=&quot;Current status: hidden&quot;
 else
-	subtitle="Current status: visible"
+	subtitle=&quot;Current status: visible&quot;
 fi
 
 #check the input and display the relative title
 PAR={query}
 if [ -z $PAR ]; then
-	title="Toggle visibility of hidden files"
-elif [ $PAR = "f" ] || [ $PAR = "false" ]; then
-	title="Show hidden files"
-elif [ $PAR = "t" ] || [ $PAR = "true" ]; then
-	title="Hide hidden files"
+	title=&quot;Toggle visibility of hidden files&quot;
+elif [ $PAR = &quot;f&quot; ] || [ $PAR = &quot;false&quot; ]; then
+	title=&quot;Show hidden files&quot;
+elif [ $PAR = &quot;t&quot; ] || [ $PAR = &quot;true&quot; ]; then
+	title=&quot;Hide hidden files&quot;
 else
-	title="Parameter not correct"
+	title=&quot;Parameter not correct&quot;
 fi
 
-echo '&lt;?xml version="1.0"?&gt;&lt;items&gt;'
-echo "&lt;item arg=\"{query}\" uid=\"ssid\" valid=\"yes\"&gt;"
-echo "&lt;title&gt;$title&lt;/title&gt;"
-echo "&lt;subtitle&gt;$subtitle&lt;/subtitle&gt;"
-echo "&lt;icon&gt;icon.png&lt;/icon&gt;&lt;/item&gt;&lt;/items&gt;"
-echo "&lt;/items&gt;"</string>
+echo &apos;&lt;?xml version=&quot;1.0&quot;?&gt;&lt;items&gt;&apos;
+echo &quot;&lt;item arg=\&quot;{query}\&quot; uid=\&quot;ssid\&quot; valid=\&quot;yes\&quot;&gt;&quot;
+echo &quot;&lt;title&gt;$title&lt;/title&gt;&quot;
+echo &quot;&lt;subtitle&gt;$subtitle&lt;/subtitle&gt;&quot;
+echo &quot;&lt;icon&gt;icon.png&lt;/icon&gt;&lt;/item&gt;&lt;/items&gt;&quot;
+echo &quot;&lt;/items&gt;&quot;</string>
 				<key>title</key>
 				<string>Show/Hide hidden files</string>
 				<key>type</key>
@@ -225,10 +225,10 @@ echo "&lt;/items&gt;"</string>
 How to use workflow:
 
 1. Install workflow in Alfred
-2. Type "hidden"
+2. Type &quot;hidden&quot;
 3. Now you have to simply type this:
-	+ "true" or "t" for hide hidden files
-	+ "false" or "f" for show hidden files
+	+ &quot;true&quot; or &quot;t&quot; for hide hidden files
+	+ &quot;false&quot; or &quot;f&quot; for show hidden files
 4. Enjoy! :)
 
 Otherwise you can simply use this simple hotkey:
@@ -250,7 +250,7 @@ Changelog
 
 **Version 1.3**
 
-+ Now is possible to simply type 'Hidden' to change visibility of hidden files
++ Now is possible to simply type &apos;Hidden&apos; to change visibility of hidden files
 + Script is now in external file 
 
 
