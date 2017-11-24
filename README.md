@@ -1,4 +1,4 @@
-Manage hidden files for Alfred 2
+Manage hidden files for Alfred 2/3
 ===================
 
 This workflow permit to toggle the visiblity of hidden files in Finder in macOS (10.8 and higher).
